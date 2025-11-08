@@ -45,40 +45,7 @@
         <p>Hacking is the act of identifying and exploiting weaknesses in a computer system, network, or application, usually to gain unauthorized access to data or control over the system. It is often associated with illegal activities and cybercrime, but it can also be performed for legitimate, defensive purposes. </p>
       </div>
     </section>
-<script>
-	document.getElementById('send-btn').addEventListener('click', sendMessage);
-document.getElementById('user-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        sendMessage();
-    }
-});
 
-function sendMessage() {
-    const input = document.getElementById('user-input');
-    const message = input.value.trim();
-    if (message === '') return;
-
-    // Add user message to chat
-    addMessage(message, 'user');
-    input.value = '';
-
-    // Simulate AI response (replace with real API call)
-    setTimeout(() => {
-        const aiResponse = "This is a simulated AI response. Integrate with an API for real functionality.";
-        addMessage(aiResponse, 'ai');
-    }, 1000);
-}
-
-function addMessage(text, sender) {
-    const chatBox = document.getElementById('chat-box');
-    const messageDiv = document.createElement('div');
-    messageDiv.classList.add('message', sender);
-    messageDiv.textContent = text;
-    chatBox.appendChild(messageDiv);
-    chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll
-}
-
-</script>
     <section id="newsletter">
       <div class="container">
         <h1>Ask your Question's here............
